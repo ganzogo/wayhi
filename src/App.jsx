@@ -25,7 +25,7 @@ function App() {
 
   return (
     <>
-      <h1>wayhi</h1>
+      <h1><span translate="no">wayhi</span></h1>
 
       <div className="grid">
         {people.map((person, index) => (
