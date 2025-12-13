@@ -1,4 +1,7 @@
 import { useState } from 'react'
+import PersonCard from './components/PersonCard'
+import AddCard from './components/AddCard'
+import AddPersonModal from './components/AddPersonModal'
 
 function App() {
   const [people, setPeople] = useState([])
@@ -22,45 +25,23 @@ function App() {
 
   return (
     <>
-      <h1>wayhi</h1>
+      <h1>People</h1>
 
       <div className="grid">
         {people.map((person, index) => (
-          <div className="card" key={index}>
-            <div className="avatar">👤</div>
-            <div className="name">{person.name}</div>
-          </div>
+          <PersonCard key={index} name={person.name} />
         ))}
 
-        <div className="card add-card" onClick={openModal}>
-          +
-        </div>
+        <AddCard onClick={openModal} />
       </div>
 
       {isModalOpen && (
-        <div className="modal-overlay">
-          <div className="modal">
-            <h2>Add Person</h2>
-            <input
-              type="text"
-              placeholder="Name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-            />
-            <div className="modal-actions">
-              <button className="btn-cancel" onClick={closeModal}>
-                Cancel
-              </button>
-              <button
-                className="btn-add"
-                onClick={addPerson}
-                disabled={!name.trim()}
-              >
-                Add
-              </button>
-            </div>
-          </div>
-        </div>
+        <AddPersonModal
+          name={name}
+          setName={setName}
+          onAdd={addPerson}
+          onCancel={closeModal}
+        />
       )}
     </>
   )
