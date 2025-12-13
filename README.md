@@ -2,7 +2,6 @@
 
 Next steps
 
-* Move all component CSS to its own files
 * Start using typescript
 * Get linting working
 * Instroduce Bazel

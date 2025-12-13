@@ -1,4 +1,7 @@
 // src/components/AddPersonModal.jsx
+
+import './AddPersonModal.css'
+
 function AddPersonModal({ name, setName, onAdd, onCancel }) {
   return (
     <div className="modal-overlay">

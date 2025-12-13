@@ -1,0 +1,12 @@
+.add-card {
+  border: 2px dashed #bbb;
+  background: #fafafa;
+  color: #777;
+  font-size: 48px;
+  cursor: pointer;
+}
+
+.add-card:hover {
+  background: #f0f0f0;
+  border-color: #999;
+}
