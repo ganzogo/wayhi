@@ -1,0 +1,33 @@
+# dependencies
+/node_modules/
+
+# production build
+/dist/
+
+# local env files
+.env
+.env.local
+.env.*.local
+
+# Vite cache
+/.vite/
+
+# npm logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE/editor folders
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Optional: local testing files
+*.local

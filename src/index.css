@@ -1,0 +1,125 @@
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f4f6f8;
+      margin: 0;
+      padding: 40px;
+    }
+
+    h1 {
+      margin-bottom: 24px;
+      color: #333;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 200px);
+      gap: 20px;
+    }
+
+    .card {
+      width: 200px;
+      height: 200px;
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      cursor: default;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+    }
+
+    .avatar {
+      font-size: 64px;
+      margin-bottom: 12px;
+    }
+
+    .name {
+      font-weight: 600;
+      color: #444;
+      text-align: center;
+      padding: 0 8px;
+    }
+
+    .add-card {
+      border: 2px dashed #bbb;
+      background: #fafafa;
+      color: #777;
+      font-size: 48px;
+      cursor: pointer;
+    }
+
+    .add-card:hover {
+      background: #f0f0f0;
+      border-color: #999;
+    }
+
+    /* Modal styles */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+
+    .modal {
+      background: white;
+      border-radius: 16px;
+      padding: 24px;
+      width: 320px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    .modal h2 {
+      margin-top: 0;
+      margin-bottom: 16px;
+    }
+
+    .modal input {
+      width: 100%;
+      padding: 10px 12px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      margin-bottom: 20px;
+    }
+
+    .modal-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+    }
+
+    button {
+      padding: 8px 14px;
+      font-size: 14px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-cancel {
+      background: #e0e0e0;
+    }
+
+    .btn-add {
+      background: #4f7cff;
+      color: white;
+    }
+
+    .btn-add:disabled {
+      background: #a9baff;
+      cursor: not-allowed;
+    }
