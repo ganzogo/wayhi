@@ -1,3 +1,18 @@
+# wayhi
+
+Next steps
+
+* Move all component CSS to its own files
+* Start using typescript
+* Get linting working
+* Instroduce Bazel
+* Why Vite? What are the alternatives? 
+* Options for bundling CSS
+* Snapshot tests
+* UI tests
+
+---
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
