@@ -2,7 +2,6 @@
 
 Next steps
 
-* Start using typescript properly - Step 4: Add basic types to props: https://chatgpt.com/c/693dc618-4700-8325-b348-57a4638e3904
 * Get linting working
 * Instroduce Bazel
 * Why Vite? What are the alternatives? 

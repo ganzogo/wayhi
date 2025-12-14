@@ -1,5 +1,6 @@
 // src/components/AddPersonModal.jsx
 
+import { useEffect, useRef } from "react";
 import './AddPersonModal.css'
 
 interface AddPersonModalProps {
@@ -10,11 +11,19 @@ interface AddPersonModalProps {
 }
 
 function AddPersonModal({ name, setName, onAdd, onCancel }: AddPersonModalProps) {
+
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    inputRef.current?.focus();
+  }, []);
+
   return (
     <div className="modal-overlay">
       <div className="modal">
         <h2>Add Person</h2>
         <input
+          ref={inputRef}
           type="text"
           placeholder="Name"
           value={name}
