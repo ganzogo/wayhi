@@ -6,11 +6,13 @@ import './AddPersonModal.css'
 interface AddPersonModalProps {
   name: string
   setName: (name: string) => void
+  dob: string
+  setDob: (dob: string) => void
   onAdd: () => void
   onCancel: () => void
 }
 
-function AddPersonModal({ name, setName, onAdd, onCancel }: AddPersonModalProps) {
+function AddPersonModal({ name, setName, dob, setDob, onAdd, onCancel }: AddPersonModalProps) {
 
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -28,6 +30,11 @@ function AddPersonModal({ name, setName, onAdd, onCancel }: AddPersonModalProps)
           placeholder="Name"
           value={name}
           onChange={(e) => setName(e.target.value)}
+        />
+        <input
+          type="date"
+          value={dob}
+          onChange={(e) => setDob(e.target.value)}
         />
         <div className="modal-actions">
           <button className="btn-cancel" onClick={onCancel}>
