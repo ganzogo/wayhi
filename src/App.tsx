@@ -5,12 +5,14 @@ import AddPersonModal from './components/AddPersonModal'
 
 interface Person {
   name: string
+  dob: string
 }
 
 function App() {
-  const [people, setPeople] = useState<Person>([])
+  const [people, setPeople] = useState<Person[]>([])
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [name, setName] = useState('')
+  const [dob, setDob] = useState('')
 
   function openModal() {
     setName('')
@@ -22,8 +24,7 @@ function App() {
   }
 
   function addPerson() {
-    if (!name.trim()) return
-    setPeople([...people, { name }])
+    setPeople([...people, { name, dob }])
     closeModal()
   }
 
@@ -43,6 +44,8 @@ function App() {
         <AddPersonModal
           name={name}
           setName={setName}
+          dob={dob}
+          setDob={setDob}
           onAdd={addPerson}
           onCancel={closeModal}
         />

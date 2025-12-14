@@ -14,6 +14,14 @@ interface AddPersonModalProps {
 
 function AddPersonModal({ name, setName, dob, setDob, onAdd, onCancel }: AddPersonModalProps) {
 
+  function isFormValid() {
+
+    const birthDate = new Date(dob);
+    const year = birthDate.getFullYear()
+
+    return name.trim() && dob && year >= 1900
+  }
+
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
@@ -50,7 +58,7 @@ function AddPersonModal({ name, setName, dob, setDob, onAdd, onCancel }: AddPers
           <button
             className="btn-add"
             onClick={onAdd}
-            disabled={!name.trim()}
+            disabled={!isFormValid()}
           >
             Add
           </button>
