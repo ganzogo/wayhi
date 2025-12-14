@@ -33,6 +33,7 @@ function AddPersonModal({ name, setName, dob, setDob, onAdd, onCancel }: AddPers
         />
         <input
           type="date"
+          max={new Date().toISOString().split("T")[0]}
           value={dob}
           onChange={(e) => setDob(e.target.value)}
         />
