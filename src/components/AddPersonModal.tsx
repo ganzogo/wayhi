@@ -2,7 +2,14 @@
 
 import './AddPersonModal.css'
 
-function AddPersonModal({ name, setName, onAdd, onCancel }) {
+interface AddPersonModalProps {
+  name: string
+  setName: (name: string) => void
+  onAdd: () => void
+  onCancel: () => void
+}
+
+function AddPersonModal({ name, setName, onAdd, onCancel }: AddPersonModalProps) {
   return (
     <div className="modal-overlay">
       <div className="modal">

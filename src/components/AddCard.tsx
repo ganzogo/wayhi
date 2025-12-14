@@ -2,7 +2,11 @@
 
 import './AddCard.css'
 
-function AddCard({ onClick }) {
+interface AddCardProps {
+  onClick: () => void
+}
+
+function AddCard({ onClick }: AddCardProps) {
   return (
     <div className="card add-card" onClick={onClick}>
       +

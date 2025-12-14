@@ -3,8 +3,12 @@ import PersonCard from './components/PersonCard'
 import AddCard from './components/AddCard'
 import AddPersonModal from './components/AddPersonModal'
 
+interface Person {
+  name: string
+}
+
 function App() {
-  const [people, setPeople] = useState([])
+  const [people, setPeople] = useState<Person>([])
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [name, setName] = useState('')
 

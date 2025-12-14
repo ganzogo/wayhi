@@ -2,7 +2,11 @@
 
 import './PersonCard.css'
 
-function PersonCard({ name }) {
+interface PersonCardProps {
+  name: string
+}
+
+function PersonCard({ name }: PersonCardProps) {
   return (
     <div className="card">
       <div className="avatar">👤</div>
