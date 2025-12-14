@@ -24,19 +24,25 @@ function AddPersonModal({ name, setName, dob, setDob, onAdd, onCancel }: AddPers
     <div className="modal-overlay">
       <div className="modal">
         <h2>Add Person</h2>
-        <input
-          ref={inputRef}
-          type="text"
-          placeholder="Name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
-        <input
-          type="date"
-          max={new Date().toISOString().split("T")[0]}
-          value={dob}
-          onChange={(e) => setDob(e.target.value)}
-        />
+        <label>
+          Name
+          <input
+            ref={inputRef}
+            type="text"
+            placeholder=""
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+        </label>
+        <label>
+          Date of birth
+          <input
+            type="date"
+            max={new Date().toISOString().split("T")[0]}
+            value={dob}
+            onChange={(e) => setDob(e.target.value)}
+          />
+        </label>
         <div className="modal-actions">
           <button className="btn-cancel" onClick={onCancel}>
             Cancel
